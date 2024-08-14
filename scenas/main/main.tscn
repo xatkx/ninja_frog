@@ -1,0 +1,157 @@
+[gd_scene load_steps=23 format=3 uid="uid://obbi13mghj81"]
+
+[ext_resource type="PackedScene" uid="uid://b4hrahw7bgvfg" path="res://scenas/plataform/trampolin.tscn" id="1_867xr"]
+[ext_resource type="PackedScene" uid="uid://ct3am1ph0wjhs" path="res://scenas/niveles/level_1.tscn" id="1_o2xv7"]
+[ext_resource type="Texture2D" uid="uid://c8tgrg7ce5tct" path="res://Assets/Main Characters/Pink Man/Idle (32x32).png" id="1_wf8in"]
+[ext_resource type="PackedScene" uid="uid://n854tsria54w" path="res://scenas/character/ninja.tscn" id="2_djorb"]
+[ext_resource type="PackedScene" uid="uid://brq84qh5h3uhq" path="res://scenas/background/bg.tscn" id="3_t7bwe"]
+[ext_resource type="PackedScene" uid="uid://b6fkb1vxuoyts" path="res://scenas/enemys/saw.tscn" id="6_fqf3a"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="7_uws6r"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="8_gox86"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="9_4xavu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fri8v"]
+atlas = ExtResource("1_wf8in")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_huh2k"]
+atlas = ExtResource("1_wf8in")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s3trd"]
+atlas = ExtResource("1_wf8in")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s1grl"]
+atlas = ExtResource("1_wf8in")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b4boy"]
+atlas = ExtResource("1_wf8in")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lqlcd"]
+atlas = ExtResource("1_wf8in")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f3jhs"]
+atlas = ExtResource("1_wf8in")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xw0q6"]
+atlas = ExtResource("1_wf8in")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u1spl"]
+atlas = ExtResource("1_wf8in")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ma5kq"]
+atlas = ExtResource("1_wf8in")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w14sl"]
+atlas = ExtResource("1_wf8in")
+region = Rect2(320, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g3qgv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fri8v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_huh2k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s3trd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s1grl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b4boy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lqlcd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f3jhs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xw0q6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u1spl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ma5kq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w14sl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Resource" id="Resource_5xakt"]
+script = ExtResource("9_4xavu")
+duration = 1.0
+transition = 0
+ease = 2
+
+[node name="main" type="Node2D"]
+
+[node name="TileMap" parent="." instance=ExtResource("1_o2xv7")]
+position = Vector2(0, 612)
+scale = Vector2(1.99782, 2.00365)
+
+[node name="Trampolin" parent="." instance=ExtResource("1_867xr")]
+position = Vector2(5634, 124)
+
+[node name="Ninja" parent="." instance=ExtResource("2_djorb")]
+position = Vector2(458.199, 583.377)
+
+[node name="enemies" type="Node2D" parent="."]
+position = Vector2(4549.8, 558.285)
+
+[node name="saw" parent="enemies" instance=ExtResource("6_fqf3a")]
+
+[node name="saw2" parent="enemies" instance=ExtResource("6_fqf3a")]
+position = Vector2(762.623, -1014.91)
+
+[node name="saw3" parent="enemies" instance=ExtResource("6_fqf3a")]
+position = Vector2(-93.4229, -1336.99)
+
+[node name="saw4" parent="enemies" instance=ExtResource("6_fqf3a")]
+position = Vector2(-406.259, -2093.94)
+
+[node name="saw5" parent="enemies" instance=ExtResource("6_fqf3a")]
+position = Vector2(-3599.19, -91.6796)
+
+[node name="allie" type="AnimatedSprite2D" parent="."]
+position = Vector2(420, 208)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_g3qgv")
+autoplay = "default"
+frame_progress = 0.259222
+
+[node name="BG" parent="." instance=ExtResource("3_t7bwe")]
+
+[node name="setting" type="Node" parent="."]
+
+[node name="Camera" type="Camera2D" parent="setting"]
+position = Vector2(458.199, 583.377)
+limit_smoothed = true
+position_smoothing_speed = 2.0
+
+[node name="PhantomCameraHost" type="Node" parent="setting/Camera"]
+script = ExtResource("7_uws6r")
+
+[node name="PhantomCamera2D" type="Node2D" parent="." node_paths=PackedStringArray("follow_target")]
+position = Vector2(458.199, 583.377)
+script = ExtResource("8_gox86")
+follow_mode = 2
+follow_target = NodePath("../Ninja")
+tween_resource = SubResource("Resource_5xakt")

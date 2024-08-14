@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://bpl3rn1jt6xdw"]
+
+[ext_resource type="Texture2D" uid="uid://3614j5xljwwm" path="res://Assets/Background/Brown.png" id="1_gldla"]
+[ext_resource type="PackedScene" uid="uid://n854tsria54w" path="res://scenas/character/ninja.tscn" id="2_hxl5r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4rul"]
+size = Vector2(1182, 24)
+
+[node name="tested" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(6, 608)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(559, 0)
+scale = Vector2(18.4688, 1)
+texture = ExtResource("1_gldla")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(559, -21)
+shape = SubResource("RectangleShape2D_g4rul")
+metadata/_edit_group_ = true
+
+[node name="Ninja" parent="." instance=ExtResource("2_hxl5r")]
+position = Vector2(256, 508)

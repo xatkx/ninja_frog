@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcdl5gu2dshkk"]
+
+[ext_resource type="Texture2D" uid="uid://cxr5wgi3hp54h" path="res://Assets/Background/Blue.png" id="1_71ls6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cwd8c"]
+size = Vector2(128, 126)
+
+[node name="StaticBody2D" type="StaticBody2D" groups=["grap"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.5)
+scale = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_cwd8c")
+
+[node name="grap block" type="Sprite2D" parent="."]
+position = Vector2(1.90735e-06, -0.499999)
+scale = Vector2(1, 0.984375)
+texture = ExtResource("1_71ls6")

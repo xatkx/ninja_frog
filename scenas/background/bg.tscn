@@ -1,0 +1,53 @@
+[gd_scene load_steps=6 format=3 uid="uid://brq84qh5h3uhq"]
+
+[ext_resource type="Texture2D" uid="uid://c8c4fe7k437mr" path="res://Assets/Background/paralax/two/Layers/sky.png" id="1_kemo6"]
+[ext_resource type="Texture2D" uid="uid://btpyl6855xpdk" path="res://Assets/Background/paralax/two/Layers/clouds_bg.png" id="2_vme7y"]
+[ext_resource type="Texture2D" uid="uid://dtw3lwqooiyls" path="res://Assets/Background/paralax/two/Layers/glacial_mountains.png" id="3_av824"]
+[ext_resource type="Texture2D" uid="uid://ddwiswke175vx" path="res://Assets/Background/paralax/two/Layers/clouds_mg_2.png" id="4_icfog"]
+[ext_resource type="Texture2D" uid="uid://bmn78pysqebis" path="res://Assets/Background/paralax/two/Layers/cloud_lonely.png" id="5_brwdn"]
+
+[node name="BG" type="ParallaxBackground"]
+
+[node name="azul" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(1152, 648)
+
+[node name="Sprite2D" type="Sprite2D" parent="azul"]
+scale = Vector2(3, 3)
+texture = ExtResource("1_kemo6")
+centered = false
+
+[node name="back_cloud" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.3, 0.3)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="back_cloud"]
+scale = Vector2(3, 3)
+texture = ExtResource("2_vme7y")
+centered = false
+
+[node name="montain" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.4, 0.4)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="montain"]
+scale = Vector2(3, 3)
+texture = ExtResource("3_av824")
+centered = false
+
+[node name="button_cloud" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.7, 0.7)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="button_cloud"]
+scale = Vector2(3, 3)
+texture = ExtResource("4_icfog")
+centered = false
+
+[node name="one_cloud" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.8, 0.8)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="one_cloud"]
+scale = Vector2(3, 3)
+texture = ExtResource("5_brwdn")
+centered = false

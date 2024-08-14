@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://du8wo3njthorc"]
+
+[ext_resource type="Script" path="res://scenas/niveles/plataform_move.gd" id="1_olokr"]
+[ext_resource type="Texture2D" uid="uid://bgg6x46o3e1vw" path="res://Assets/Terrain/Terrain (16x16).png" id="2_d1dtw"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_f805k"]
+a = Vector2(-23, 0)
+b = Vector2(23, 0)
+
+[node name="plataform_1" type="AnimatableBody2D"]
+scale = Vector2(2, 2)
+constant_linear_velocity = Vector2(0, -2)
+script = ExtResource("1_olokr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_d1dtw")
+region_enabled = true
+region_rect = Rect2(273, 1, 46, 3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("SegmentShape2D_f805k")
